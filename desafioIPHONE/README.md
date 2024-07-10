@@ -1,18 +1,50 @@
-## Getting Started
+# [DIO](www.dio.me) - Trilha Java Básico
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+## Autora
+- [Talita Parcerão](https://github.com/talitaparcerao)
 
-## Folder Structure
+## POO - Desafio
 
-The workspace contains two folders by default, where:
+### Modelagem e Diagramação de um Componente iPhone
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+Neste desafio eu modelri e diagramei a representação UML do componente iPhone, abrangendo suas funcionalidades como Reprodutor Musical, Aparelho Telefônico e Navegador na Internet.
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+#### Funcionalidades a Modelar
+1. **Reprodutor Musical**
+   - Métodos: `tocar()`, `pausar()`, `selecionarMusica(String musica)`
+2. **Aparelho Telefônico**
+   - Métodos: `ligar(String numero)`, `atender()`, `iniciarCorreioVoz()`
+3. **Navegador na Internet**
+   - Métodos: `exibirPagina(String url)`, `adicionarNovaAba()`, `atualizarPagina()`
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+### Objetivo
+1. Criar um diagrama UML que represente as funcionalidades descritas acima.
+2. Implementar as classes e interfaces correspondentes em Java (Opcional).
 
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+### Exemplo de Diagrama UML (Mermaid)
+```mermaid
+classDiagram
+    iPhone <|-- ReprodutorMusical
+    iPhone <|-- AparelhoTelefonico
+    iPhone <|-- NavegadorInternet
+    iPhone : +int fabricacao
+    iPhone : +String modelo
+    iPhone: +ligar()
+    iPhone: +achar()
+    class ReprodutorMusical{
+      +selecionarMusica(String Musica)
+      +pausar()
+      +tocar()
+    }
+    class AparelhoTelefonico{
+      +ligar(String numero)
+      +atender()
+      +iniciarCorreioVoz()
+    }
+    class NavegadorInternet{
+      +verificarConexao()
+      +exibirPagina(Sring url)
+      +adicionarNovaAba()
+      +atualizarPagina()
+    }
+```
